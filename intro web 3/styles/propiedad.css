@@ -1,0 +1,15 @@
+#titulo{
+  font-family:Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:10px;
+  color: rgba(rgb(255, 83, 83), rgb(190, 75, 156)rgb(253, 143, 180)ue, alpha);
+
+  border: 3px solid green;
+
+  width: 100px;
+  height: 60px;
+  overflow: scroll;
+
+  margin: 60px;
+  padding: 10px;
+  
+}
