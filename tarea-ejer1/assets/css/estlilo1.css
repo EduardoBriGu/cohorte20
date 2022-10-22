@@ -1,0 +1,44 @@
+h4{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: red;
+  display: inline-block;
+  position:relative;
+  margin-top: -10px;
+}
+main{
+  color: rgb(117, 117, 255);
+  margin-bottom: 15px;
+}
+
+div{
+  color: rgb(105, 105, 105);
+  margin-bottom: 15px;
+}
+
+footer{
+  color: rgb(105, 105, 105);
+  margin-bottom: 15px;
+}
+
+#resaltado1{
+  color: red;
+}
+
+#resaltado2{
+  background-color: rgb(255, 217, 223);
+  color: blue;
+}
+
+#resaltado3{
+  background-color: black;
+  color: yellow;
+}
+
+#resaltado4{
+  background-color: black;
+  color: yellow;
+}
+
+.resaltado5{
+  color: red;
+}
