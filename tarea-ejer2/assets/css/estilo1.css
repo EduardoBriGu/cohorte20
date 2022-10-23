@@ -1,0 +1,28 @@
+*{
+  color: rgb(24, 24, 184);
+}
+
+.Titulo{
+  color: red;
+}
+
+body{
+  background-color: rgb(121, 224, 161);
+}
+
+.verde{
+  color: green;
+}
+
+.subtema{
+  color: rgb(158, 0, 0);
+}
+
+main{
+  margin-bottom: 10px;
+}
+
+.subnegro{
+  background-color: black;
+  color: aliceblue;
+}
