@@ -1,0 +1,43 @@
+#coteal{
+  color: teal;
+}
+
+#cored{
+  color: red;
+}
+
+#coblue{
+  color: blue;
+}
+
+#corange{
+  color: orange;
+}
+
+#copurple{
+  color: purple;
+}
+
+#colive{
+  color: olive;
+}
+
+#cofuchsia{
+  color: fuchsia;
+}
+
+#cogreen{
+  color: green;
+}
+
+.bacred{
+  background-color: red;
+}
+
+.bacgreen{
+  background-color: green;
+}
+
+.bacblue{
+  background-color: blue;
+}
