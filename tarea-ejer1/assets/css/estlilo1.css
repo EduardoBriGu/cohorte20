@@ -4,6 +4,7 @@ h4{
   display: inline-block;
   position:relative;
   margin-top: -10px;
+  text-decoration: underline;
 }
 main{
   color: rgb(117, 117, 255);
@@ -22,6 +23,7 @@ footer{
 
 #resaltado1{
   color: red;
+  text-decoration: underline;
 }
 
 #resaltado2{
@@ -41,4 +43,5 @@ footer{
 
 .resaltado5{
   color: red;
+  text-decoration: underline;
 }
