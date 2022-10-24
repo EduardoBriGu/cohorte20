@@ -1,0 +1,39 @@
+/* FORM STARTS */
+
+input{
+  border-color: red;
+}
+
+#conegro{
+  color: black;
+}
+
+#coblanco{
+  color:azure;
+}
+
+#form{
+  display: inline-block;
+  background-color: green;
+  padding: 50px;
+  border-top: 7px solid cyan;
+  border-right: 7px solid cyan;
+  border-bottom: 7px solid cyan;
+  border-left: 7px solid cyan;
+  border-radius: 10px;
+}
+
+label{
+  display: inline-block;
+  width: 70px;
+}
+
+h2{
+  margin-top: 1px;
+  margin-left: -30px;
+}
+
+#margin{
+  border: black;
+}
+/* FOMR ENDS */
