@@ -1,0 +1,54 @@
+/* Position static; */
+/* relative - tiene como base la posición original del elemento */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.padre{
+  border: 3px dashed green;
+/*   border-width: ;
+  border-top-width: ;
+  border-bottom-width: ;
+  border-right-width: ;
+  border-left-width: ; 
+  
+  Border-style: ;
+  border-color*/
+
+}
+
+.cuadro{
+ /*  background-color: aqua; */
+  border: 2px solid purple;
+  width: 200px;
+  height: 200px;
+}
+
+.uno{
+  background-color: blue;
+  /*position: relative;
+  Top, bottom, left, right 
+  top: -50px;
+  right: 100px;
+  top y bottom son contrarios, así como left y right  
+  top=100px == bottom=-100px
+  left=100px == right=-100px*/
+}
+/* absolute: retira el elemento del fluj normal del documento 
+    se mide apartir de la parte visible del naavegador */
+.dos{
+  background-color: red;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.tres{
+  background-color: green;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+ /*  posicion top, left, bottom, right: debe haber suficiente espacio en su elemento */
+}
