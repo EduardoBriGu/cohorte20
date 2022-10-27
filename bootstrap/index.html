@@ -1,47 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intro Bootstrap 5</title>
-  
-  <link rel="stylesheet" href="./styles/css0.css">
-</head>
-<body>
-  <h1>Hola bootstrap 5</h1>
-  
-  <div class="container">
-    <p> Este es un parrafo dentro de un contenedor "conteiner"
-    </p>
-  </div>
-  
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Bootstrap 5</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.2.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles/css0.css" />
+  </head>
+  <body>
+    <h1>Hola bootstrap 5</h1>
+
+    <div class="container">
+      <p>Este es un parrafo dentro de un contenedor "conteiner"</p>
+    </div>
+
     <div class="container">
     <div class="row">
-    <div class="col uno">
-      columna
-    </div>
-    <div class="col dos">
-      columna
-    </div>
-    <div class="col">
-      columna
+      <div class="col uno">columna 1</div>
+      <div class="col dos">columna 2</div>
+      <div class="col tres">columna 3</div>
+
+      <div class="row">
+        <div class="col cuatro">columna 4</div>
+        <div class=".col cinco">columna 5</div>
+      </div>
+
+      <!-- cierre fila 1 -->
+
+      <!-- apertura nueva fila -->
+      <div class="row text-center">
+        <div class="col-8 nuno">1 de 3</div>
+        <div class="col-4 ancho">2 de 3 (más ancho)</div>
+        <!-- cierre fila 2 -->
+        <!-- apertura fila 3     
+      <div class="col-3 ntres">
+      3 de 3
+      </div> 
+    -->
       </div>
     </div>
-    <!-- nueva fila -->
-    <div class="row">
-      <div class="col">
-        1 de 3
+      <!-- pruebas -->
+    
+    <!-- cierre de container -->
+
+    <!-- Botones -->
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+
+    <!-- etiquetas de los botones  -->
+
+    <a class="btn btn-primary" href="#" role="button">Link</a>
+    <button class="btn btn-primary" type="submit">Button</button>
+    <input class="btn btn-primary" type="button" value="Input" />
+    <input class="btn btn-primary" type="submit" value="Submit" />
+    <input class="btn btn-primary" type="reset" value="Reset" />
+
+    <!--  Botones largos  -->
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+
+    <!-- Botones cortos -->
+    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+    <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+    <!-- Botones desactivados con "disable"-->
+    <button type="button" class="btn btn-primary" disabled>Primary button</button>
+
+    <!-- Botones desactivaods con true y false -->
+    <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+    <a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
+
+    <!-- Botones de bloques -->
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
     </div>
-    <div class="col-6 ancho">
-      2 de 3 (más ancho)
+    <div class="d-grid gap-2 d-md-block">
+      <button id="liveAlertBtn" class="btn btn-primary" type="button">Button</button>
     </div>
-    <div class="col">
-      3 de 3
+
+    <!-- Botones con alertas -->
+    <div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" >Show live alert</button>
+
+<script>
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert('Nice, you triggered this alert message!', 'success')
+  })
+} </script>
+
+<!-- Modal alert sin que se pueda quitar amenos que lo cierres -->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Este es el titulo del modal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Este es un ejemplo de un modal alert button, debes presionar colse para que se quite el alert, de otra manera no podrás 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- script -->
-</body>
+<script src="./bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+  </body>
 </html>

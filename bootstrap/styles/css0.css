@@ -1,5 +1,7 @@
+
+
 .container{
-  background-color: violet;
+/*   background-color: violet; */
   margin-top: 20px;
 }
 
@@ -13,4 +15,32 @@
 
 .dos{
   background-color: bisque;
+}
+
+.tres{
+  background-color: blue;
+}
+
+.cuatro{
+  background-color: brown;
+}
+
+.ancho{
+  background-color: yellow;
+}
+
+body{
+  padding: 30px;
+}
+
+.nuno{
+  background-color: aquamarine ;
+}
+
+.ancho{
+  background-color: blueviolet;
+}
+
+.ntres{
+  background-color: aqua;
 }
