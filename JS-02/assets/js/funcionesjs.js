@@ -1,13 +1,13 @@
 let miNombre = " Eduardo Briones Gutiérrez ";
 console.log(miNombre);
 
-function nombre (){
-  let nombre = "Eduardo"
+function nombre() {
+  let nombre = "Eduardo";
   console.log(nombre);
 }
 nombre();
 
-function funcion1(){
+function funcion1() {
   let valor = 2;
   valor = valor + 3;
   return valor;
@@ -15,23 +15,22 @@ function funcion1(){
 let resultado = funcion1();
 console.log("El resultado es: " + resultado);
 
-//DECLARACIÓN GLOBAL 
+//DECLARACIÓN GLOBAL
 let valor2 = 3;
-function funcion2(){
+function funcion2() {
   valor2 = valor2 + 5;
-console.log("El resultado de valor2 es: " + valor2);
+  console.log("El resultado de valor2 es: " + valor2);
 }
 funcion2();
 
-
 let variableGlobal = 5;
-function funcion3(){
-  let variableLocal = "El valor es: "
+function funcion3() {
+  let variableLocal = "El valor es: ";
   console.log(variableLocal + variableGlobal);
 }
 funcion3();
 
-function funcion4(valor){
+function funcion4(valor) {
   let numero = 6;
   numero = numero + valor;
   return numero;
@@ -39,25 +38,22 @@ function funcion4(valor){
 let salida = funcion4(3);
 console.log("El producto es: " + salida);
 
-
-let miFuncion0 = function(parametro){
+let miFuncion0 = function (parametro) {
   parametro = parametro * 2;
   return parametro;
 };
-console.log("Llamando a la funcion anonima " + miFuncion0 (4))
+console.log("Llamando a la funcion anonima " + miFuncion0(4));
 
-
-let funcion01 = function (caracteres){
-  return "Hola "+ caracteres;
-} ("Lunes ");
-console.log("El resultado es: " + funcion01)
-
+let funcion01 = (function (caracteres) {
+  return "Hola " + caracteres;
+})("Lunes ");
+console.log("El resultado es: " + funcion01);
 
 let suma = (x, y) => {
-  return x+y
+  return x + y;
 };
-let resultado1 = suma (5,3);
-console.log("La suma es: " + resultado1 )
+let resultado1 = suma(5, 3);
+console.log("La suma es: " + resultado1);
 
 /* Realizar una funcion (calcularPrecioTotal)
 para Calcular el precio total de una compra tomando encuenta 
@@ -85,46 +81,75 @@ console.log("El precio Total es: " + PrecioTota2) */
 
 //normal
 
-
-// Anonima 
-let calcularPrecio1 = function (precio){
-  let impuestos = 1.16
-  let envio = 10
-  return (impuestos * precio) + envio;
-} (23.34);
-console.log("El precio total (anonima) es: ", calcularPrecio1)
+// Anonima
+let calcularPrecio1 = (function (precio) {
+  let impuestos = 1.16;
+  let envio = 10;
+  return impuestos * precio + envio;
+})(23.34);
+console.log("El precio total (anonima) es: ", calcularPrecio1);
 
 //Flecha
 let CalcularPrecioTotalFlecha = (precio) => {
   let impuesto = 1.16;
   let envio = 10;
-  let precioTotal = (impuesto * precio) + envio;
+  let precioTotal = impuesto * precio + envio;
   return precioTotal;
 };
-let precioTotal = CalcularPrecioTotalFlecha(23.34)
+let precioTotal = CalcularPrecioTotalFlecha(23.34);
 console.log("El precio Total (flecha) es = ", precioTotal);
 
 //impuestos
-let calcularPrecioTotalmpuesto = (precio,porcentajeImpuestos) => {
+let calcularPrecioTotalmpuesto = (precio, porcentajeImpuestos) => {
   let impuesto = 1.16;
   let envio = 10;
-  let precioImpuesto = ((1+porcentajeImpuestos)/100)*precio;
-  let precioTotal1 = (precio*impuesto) + envio
-  return precioTotal
-}
-let precioTotal1 = calcularPrecioTotalmpuesto(23.34, 16)
+  let precioImpuesto = ((1 + porcentajeImpuestos) / 100) * precio;
+  let precioTotal1 = precio * impuesto + envio;
+  return precioTotal;
+};
+let precioTotal1 = calcularPrecioTotalmpuesto(23.34, 16);
 console.log("El precio (calculando impuestos) es : ", precioTotal1);
 
-
-let miObjeto ={
-  impuestos: function (precio){
-    let impuestos =1.16
-    let envio = 10
-    return (impuestos * precio ) + envio
+let miObjeto = {
+  impuestos: function (precio) {
+    let impuestos = 1.16;
+    let envio = 10;
+    return impuestos * precio + envio;
   }(23.34)
-  
+};
+console.log("El precio total (con Objetos) es: ", miObjeto.impuestos);
+
+
+let objetos = {
+  nombre: "Juan",
+  edad: 30,
+  datos: function () {
+    let mensaje = "tu eres " + this.nombre;
+    mensaje += " y tienes " + this.edad + " años";
+    console.log(mensaje);
+  },
+};
+objetos.datos();
+
+let constructor = function (){
+  let objPersona ={
+    nombre: "Juan",
+    nss: 2357,
+    datosPersona: function (){
+      let msj = "eres " + this.nombre + " y tu nss es " + this.nss;
+      console.log(msj);
+    },
+    otroMetodo: function (parametro){
+      let numero = 20;
+      console.log("La suma es: " +(numero + parametro));
+    }
+  };
+  return objPersona;
 }
-console.log("El precio total (con Objetos) es: ", miObjeto.impuestos)
+let varObjReg = new constructor () // CREAR LA VARIABLE OBJETO
+varObjReg.datosPersona();
+varObjReg.otroMetodo(5); 
+
 /*
 let miObjeto = {
   impuesto: function (precio,porcentajeImpuestos) {
@@ -138,4 +163,3 @@ let miObjeto = {
 let mensaje = "tu nombre es: " + miObjeto.nombre
 mensaje += " tiene " + miObjeto.edad + " años"
 console.log(mensaje) */
-/* miObjeto.impuesto(23.34,16); */
